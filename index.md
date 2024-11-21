@@ -8,7 +8,7 @@ title: Home
 		<div id="intro-image-wrapper">
 			<img id="intro-image" src="/images/portrait.jpg"></div>
 		<div id="intro-title-text-wrapper">
-			<h1 id="intro-title">Hi, I'm Fred Hohman</h1>
+			<h1 id="intro-title">Hi, I'm Fred</h1>
 			<div id="intro-subtitle">I'm a Research Scientist at Apple</div>
 			<div id="intro-title-socials">
 				{% for link in site.data.social-links %}
