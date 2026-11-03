@@ -25,7 +25,7 @@ The repository is organized as follows:
 ```text
 .
 ├── index.html       # About and research
-├── awards.html      # CV, awards, and fellowships
+├── cv.html      # CV, awards, and fellowships
 ├── courses.html     # Course catalogue
 ├── news.html        # News and academic activities
 ├── beyond.html      # Outreach, music, and other interests
