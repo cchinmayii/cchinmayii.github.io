@@ -1,4 +1,4 @@
-# Chinmayi Subramanya — Academic Website
+# Chinmayi Subramanya - Academic Website
 
 Source code for my personal academic website, documenting my research, academic activities, and interests.
 
@@ -10,10 +10,10 @@ My research focuses on the mathematical and physical characterization of complex
 
 - **About:** Academic background and research interests.
 - **Research:** Current research focus, mathematical approaches, and manuscripts.
-- **CV:** Education, research experience, academic qualifications, awards, and fellowships, with a downloadable PDF.
+- **CV:** Academic qualifications and awards, with a downloadable PDF.
 - **Course catalogue:** Selected coursework from my integrated BS-MS degree in Physics.
 - **News:** Research updates and academic activities.
-- **Miscellaneous:** Scientific outreach, music, hiking, mushroom foraging, and other interests.
+- **Miscellaneous:** Other interests beyond the lab.
 - **Contact:** Professional contact information and relevant links.
 
 ## Technical details
