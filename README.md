@@ -50,8 +50,6 @@ Start a local HTTP server:
 python3 -m http.server 4173
 ```
 
-# (Open [http://localhost:4173](http://localhost:4173) in a browser.)
-
 ## Deployment
 
 The website is designed for static hosting through GitHub Pages. No compilation or additional build configuration is required.
