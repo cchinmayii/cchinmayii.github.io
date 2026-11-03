@@ -50,7 +50,7 @@ Start a local HTTP server:
 python3 -m http.server 4174 --bind 127.0.0.1
 ```
 
-Open [http://127.0.0.1:4174](http://127.0.0.1:4174) in a browser. If the browser shows an older version of the site, perform a hard refresh.
+Open [http://127.0.0.1:4174](http://127.0.0.1:4174) in a browser. 
 
 ## Deployment
 
