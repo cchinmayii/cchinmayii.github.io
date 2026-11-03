@@ -47,8 +47,10 @@ cd cchinmayii.github.io
 Start a local HTTP server:
 
 ```bash
-python3 -m http.server 4173
+python3 -m http.server 4174 --bind 127.0.0.1
 ```
+
+Open [http://127.0.0.1:4174](http://127.0.0.1:4174) in a browser. If the browser shows an older version of the site, perform a hard refresh.
 
 ## Deployment
 
