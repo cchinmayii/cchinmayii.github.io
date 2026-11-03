@@ -216,7 +216,7 @@ html[data-theme="dark"] .sun-icon {
 .profile h1 {
   margin: 0 0 4px;
   font-family: var(--serif);
-  font-size: clamp(42px, 5vw, 56px);
+  font-size: clamp(38px, 4.3vw, 48px);
   line-height: 1.05;
   letter-spacing: -0.03em;
 }
@@ -668,6 +668,7 @@ html[data-theme="dark"] .button.primary {
   font-size: 14px;
 }
 
+#cv > .page-title,
 #cv > h2 {
   margin-bottom: 10px;
 }
@@ -834,7 +835,7 @@ html[data-theme="dark"] .button.primary {
   }
 
   .profile h1 {
-    font-size: clamp(38px, 12vw, 46px);
+    font-size: clamp(34px, 10vw, 42px);
   }
 
   .profile-actions {
