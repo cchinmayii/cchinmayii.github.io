@@ -590,7 +590,7 @@ html[data-theme="dark"] .pixel-character__outline {
 }
 
 .network-character.is-calling .pixel-character__sprite {
-  animation: character-attention 1.75s cubic-bezier(0.3, 0.75, 0.3, 1);
+  animation: character-attention 1.75s cubic-bezier(0.3, 0.75, 0.3, 1) infinite;
 }
 
 .network-character.is-celebrating .character-head {
@@ -713,13 +713,11 @@ html[data-theme="dark"] .pixel-character__outline {
   0%,
   18%,
   36%,
-  54%,
   100% {
     transform: translateY(0);
   }
   9%,
-  27%,
-  45% {
+  27% {
     transform: translateY(-13px);
   }
 }
