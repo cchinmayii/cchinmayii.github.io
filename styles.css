@@ -1332,6 +1332,10 @@ html[data-theme="dark"] .button.primary {
   margin: 0;
 }
 
+.site-footer .footer-updated {
+  margin-left: auto;
+}
+
 .site-footer a {
   text-decoration: none;
 }
