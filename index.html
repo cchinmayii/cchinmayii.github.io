@@ -7,11 +7,11 @@
       name="description"
       content="Chinmayi Subramanya is a doctoral researcher studying the geometry and topology of spatially embedded biological networks."
     />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#f7f6f2" />
     <meta name="color-scheme" content="light dark" />
     <title>Chinmayi Subramanya</title>
     <link rel="icon" href="assets/favicon-home.png" type="image/png" sizes="256x256" />
-    <link rel="stylesheet" href="styles.css?v=11" />
+    <link rel="stylesheet" href="styles.css?v=42" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -20,7 +20,7 @@
       <div class="nav-shell">
         <a class="wordmark" href="index.html#about">Chinmayi Subramanya</a>
         <nav class="site-nav" aria-label="Primary navigation">
-          <a href="index.html#research">Research</a>
+          <a href="research.html">Research</a>
           <a href="cv.html">CV</a>
           <a href="news.html">News</a>
           <a href="beyond.html">Miscellaneous</a>
@@ -33,11 +33,72 @@
       </div>
     </header>
 
-    <main id="main-content">
+    <main class="home-main" id="main-content">
+      <div class="ensnarlment-experience" data-ensnarlment-experience>
+        <svg class="network-canvas" data-network-canvas aria-hidden="true" focusable="false">
+          <g class="network network--green" data-network-group="green"></g>
+          <g class="network network--magenta" data-network-group="magenta"></g>
+        </svg>
+
+        <button
+          class="network-character network-character--green"
+          type="button"
+          data-network-trigger="green"
+          aria-label="Grow the green network"
+          aria-pressed="false"
+        >
+          <svg class="pixel-character" viewBox="0 0 64 64" shape-rendering="crispEdges" aria-hidden="true">
+            <g class="pixel-character__sprite">
+              <rect class="pixel-character__shadow" x="12" y="58" width="40" height="4" />
+              <rect class="pixel-character__outline" x="10" y="8" width="44" height="44" />
+              <rect class="pixel-character__body" x="14" y="12" width="36" height="36" />
+              <g class="pixel-character__eye-unit">
+                <rect class="pixel-character__eye" x="18" y="25" width="10" height="10" />
+                <rect class="pixel-character__pupil" x="22" y="27" width="4" height="6" />
+              </g>
+              <g class="pixel-character__eye-unit">
+                <rect class="pixel-character__eye" x="36" y="25" width="10" height="10" />
+                <rect class="pixel-character__pupil" x="38" y="27" width="4" height="6" />
+              </g>
+            </g>
+          </svg>
+        </button>
+
+        <div class="network-character-anchor network-character-anchor--magenta">
+          <div class="ensnarlment-speech" data-ensnarlment-speech hidden aria-live="polite">
+            <a href="research.html">Ensnarlment - Explore my research →</a>
+            <button type="button" data-speech-dismiss aria-label="Dismiss research prompt">×</button>
+          </div>
+          <button
+            class="network-character network-character--magenta"
+            type="button"
+            data-network-trigger="magenta"
+            aria-label="Grow the magenta network"
+            aria-pressed="false"
+          >
+            <svg class="pixel-character" viewBox="0 0 64 64" shape-rendering="crispEdges" aria-hidden="true">
+              <g class="pixel-character__sprite">
+                <rect class="pixel-character__shadow" x="12" y="58" width="40" height="4" />
+                <rect class="pixel-character__outline" x="10" y="8" width="44" height="44" />
+                <rect class="pixel-character__body" x="14" y="12" width="36" height="36" />
+                <g class="pixel-character__eye-unit">
+                  <rect class="pixel-character__eye" x="18" y="25" width="10" height="10" />
+                  <rect class="pixel-character__pupil" x="20" y="27" width="4" height="6" />
+                </g>
+                <g class="pixel-character__eye-unit">
+                  <rect class="pixel-character__eye" x="36" y="25" width="10" height="10" />
+                  <rect class="pixel-character__pupil" x="38" y="27" width="4" height="6" />
+                </g>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+
       <section class="profile page-shell" id="about" aria-labelledby="profile-name">
         <div class="portrait-column">
           <figure class="portrait">
-            <img src="assets/chinmayi-subramanya.jpg" alt="Portrait of Chinmayi Subramanya" width="1600" height="1600" />
+            <img src="assets/chinmayi-subramanya.jpg?v=4" alt="Chinmayi Subramanya in front of blooming magnolias" width="1643" height="2191" />
           </figure>
           <div class="profile-socials" aria-label="Social links">
             <a href="mailto:subramanya@mpi-cbg.de" aria-label="Email Chinmayi" title="Email">
@@ -51,9 +112,10 @@
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM3.56 9h3.555v11.452H3.56z" />
               </svg>
             </a>
-            <a href="https://x.com/Chinmayi_S_" target="_blank" rel="noreferrer" aria-label="Chinmayi on X" title="X">
-              <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.966 6.817H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" />
+            <a href="https://scholar.google.com/citations?user=MUNUfOkAAAAJ&amp;hl=de&amp;oi=ao" target="_blank" rel="noreferrer" aria-label="Chinmayi on Google Scholar" title="Google Scholar">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m2.5 8.4 9.5-5 9.5 5-9.5 5-9.5-5Z" />
+                <path d="M6.3 10.5v5.2c1.6 1.5 3.5 2.3 5.7 2.3s4.1-.8 5.7-2.3v-5.2" />
               </svg>
             </a>
           </div>
@@ -83,57 +145,15 @@
         </div>
       </section>
 
-      <div class="page-shell content-shell">
-        <section class="content-section" id="research" aria-labelledby="research-title">
-          <h2 id="research-title">Research</h2>
-          <div class="research-description">
-            <p>
-              Organs often contain several flow networks woven through the same three-dimensional space. In the liver, blood sinusoids and bile canaliculi form distinct cyclic networks that can be linked in ways that make them impossible to separate without cutting. We call this interlinking <strong>ensnarlment</strong>.
-            </p>
-            <p>
-              My work develops mathematical and physical ways to characterize these ensnarled architectures and asks what their spatial organization means for physiology.
-            </p>
-          </div>
-          <ol class="approach-list">
-            <li><strong>Characterize</strong><span>Build measures that retain both the geometry and topology of real, spatially embedded networks.</span></li>
-            <li><strong>Compare</strong><span>Use synthetic systems and biological imaging data to identify recurring forms of network organization.</span></li>
-            <li><strong>Connect</strong><span>Relate network architecture to transport, development, and function in living tissues.</span></li>
-          </ol>
-          <div class="subsection">
-            <h3>Papers</h3>
-            <article class="publication-item">
-              <div class="item-meta">In preparation</div>
-              <div class="item-body">
-                <h4>Spectral Properties of Ensnarled Networks</h4>
-                <p class="authors"><strong>Chinmayi Subramanya</strong> · Yu Tian · Carl D. Modes</p>
-              </div>
-            </article>
-            <article class="publication-item">
-              <div class="item-meta">Preprint · 2026</div>
-              <div class="item-body">
-                <h4>
-                  <a href="https://arxiv.org/abs/2606.05153" target="_blank" rel="noreferrer">GEMINI: Generalized Ensnarlment Measure from Incomplete-linkage of Network-network Interactions</a>
-                </h4>
-                <p class="authors">Yu Tian · <strong>Chinmayi Subramanya</strong> · Carl D. Modes</p>
-                <p>
-                  A topology- and geometry-aware operator for characterizing incomplete linking and spatial associations between edges, tested on synthetic lattices and mouse brain vasculature.
-                </p>
-                <a class="inline-link" href="https://arxiv.org/abs/2606.05153" target="_blank" rel="noreferrer">Read on arXiv ↗</a>
-              </div>
-            </article>
-          </div>
-        </section>
-
-      </div>
     </main>
 
     <footer class="site-footer">
       <div class="page-shell">
         <p>© <span data-year></span> Chinmayi Subramanya</p>
-        <p>Created using <a href="https://garyking.org/mysite" target="_blank" rel="noreferrer">GaryKing.org/mysite</a></p>
+        <p class="footer-updated">Updated November 2026</p>
         <a href="#about">Back to top ↑</a>
       </div>
     </footer>
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=17"></script>
   </body>
 </html>
