@@ -1596,6 +1596,39 @@ html[data-theme="dark"] .button.primary {
   text-decoration: none;
 }
 
+@media (min-width: 1500px) and (min-height: 850px) {
+  .home-page .home-main {
+    display: grid;
+    align-items: center;
+    padding-bottom: clamp(18px, 3vh, 42px);
+  }
+
+  .home-page .profile {
+    width: min(calc(100% - 96px), clamp(1040px, calc(62vw + 110px), 1300px));
+    grid-template-columns: minmax(0, 680px) clamp(270px, calc(12vw + 90px), 320px);
+    justify-content: space-between;
+    column-gap: clamp(56px, 6vw, 120px);
+    padding-block: clamp(56px, 6vh, 76px);
+  }
+
+  .home-page .profile h1 {
+    font-size: clamp(48px, calc(1.9vw + 19.5px), 56px);
+  }
+
+  .home-page .portrait,
+  .home-page .portrait-column {
+    width: clamp(270px, calc(12vw + 90px), 320px);
+  }
+
+  .home-page .portrait-column {
+    transform: translateX(clamp(-36px, calc(8.57vw - 164.55px), 0px));
+  }
+
+  .home-page .portrait img {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1100px) {
   .ensnarlment-experience {
     display: none;
