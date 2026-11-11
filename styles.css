@@ -47,6 +47,20 @@ body {
   transition: color 160ms ease, background 160ms ease;
 }
 
+body.home-page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-page .home-main {
+  flex: 1 0 auto;
+}
+
+.home-page .site-footer {
+  margin-top: auto;
+}
+
 a {
   color: inherit;
   text-decoration-color: var(--green);
@@ -1063,6 +1077,25 @@ html[data-theme="dark"] .button.primary {
   width: fit-content;
 }
 
+.cv-page .content-section {
+  padding-bottom: 0;
+  border-top: 0;
+}
+
+.cv-page .content-section + .content-section {
+  padding-top: 0;
+}
+
+.cv-page #awards {
+  padding-block: 54px;
+}
+
+.cv-page .cv-list li:last-child,
+.cv-page .award-list li:last-child,
+.cv-page .outreach-list li:last-child {
+  border-bottom: 0;
+}
+
 .course-page {
   min-height: calc(100vh - 140px);
   padding-top: 72px;
@@ -1250,12 +1283,98 @@ html[data-theme="dark"] .button.primary {
 }
 
 .miscellaneous-section h2 {
-  margin: 0 0 16px;
+  margin: 0 0 20px;
   color: var(--text);
   font-family: var(--serif);
-  font-size: 16px;
+  font-size: 17px;
+  line-height: 1.2;
   letter-spacing: 0;
   text-transform: none;
+}
+
+.miscellaneous-copy {
+  max-width: none;
+}
+
+.miscellaneous-copy p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.miscellaneous-copy p + p {
+  margin-top: 20px;
+}
+
+.music-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.music-card {
+  min-width: 0;
+  margin: 0;
+}
+
+.music-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.music-card figcaption {
+  min-height: 2.8em;
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.music-card .photo-credit {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.instagram-credit {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  margin-left: 0;
+  vertical-align: baseline;
+}
+
+.instagram-credit svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
+.instagram-credit .instagram-dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+.media-placeholder {
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  background:
+    linear-gradient(135deg, transparent 49.5%, var(--border) 49.5%, var(--border) 50.5%, transparent 50.5%),
+    color-mix(in srgb, var(--surface) 88%, var(--background));
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .miscellaneous-intro {
@@ -1266,7 +1385,57 @@ html[data-theme="dark"] .button.primary {
 }
 
 .miscellaneous-section + .miscellaneous-intro {
-  margin-top: 44px;
+  margin-top: 66px;
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 250px));
+  justify-content: center;
+  gap: 36px;
+  margin-top: 26px;
+}
+
+.interest-card {
+  max-width: 250px;
+  min-width: 0;
+  margin: 0;
+}
+
+.interest-photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.interest-photo--hike {
+  object-position: 50% 56%;
+}
+
+.interest-photo--mushroom {
+  object-position: 50% 43%;
+}
+
+.interest-photo--coffee {
+  object-position: 50% 58%;
+}
+
+.interest-card figcaption {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.interest-card figcaption p {
+  margin: 0;
+}
+
+.interest-card figcaption p + p {
+  margin-top: 14px;
 }
 
 .outreach-list li {
@@ -1283,23 +1452,110 @@ html[data-theme="dark"] .button.primary {
   line-height: 1.55;
 }
 
-.miscellaneous-list {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.catalogue-page {
+  min-height: calc(100vh - 140px);
+  padding: 72px 0;
 }
 
-.miscellaneous-list li {
-  padding: 18px 0;
-  border-top: 1px solid var(--border);
-  font-size: 16px;
+.catalogue-header {
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+
+.catalogue-kicker {
+  margin: 0 0 8px;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.catalogue-header h1 {
+  margin: 0 0 16px;
+  font-family: var(--serif);
+  font-size: clamp(34px, 4vw, 46px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.catalogue-header--lakes {
+  max-width: none;
+}
+
+.catalogue-header--lakes .catalogue-intro {
+  max-width: none;
+}
+
+.catalogue-intro {
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
   line-height: 1.55;
 }
 
-.miscellaneous-list li:last-child {
-  border-bottom: 1px solid var(--border);
+.catalogue-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 34px 24px;
+}
+
+.catalogue-card {
+  min-width: 0;
+  margin: 0;
+}
+
+.catalogue-card figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 12px;
+}
+
+.catalogue-card strong {
+  font-family: var(--serif);
+  font-size: 17px;
+}
+
+.catalogue-card figcaption span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.entry-list .news-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  align-items: start;
+  gap: 30px;
+}
+
+.entry-list .news-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.news-image {
+  min-width: 0;
+  margin: 0;
+  transform: translateX(-24px);
+}
+
+.news-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.news-image figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
 }
 
 .postal-address {
@@ -1482,6 +1738,39 @@ html[data-theme="dark"] .button.primary {
     margin-top: 48px;
   }
 
+  .music-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .interest-grid {
+    grid-template-columns: 1fr;
+    justify-content: start;
+    gap: 40px;
+  }
+
+  .interest-card {
+    width: min(100%, 300px);
+    max-width: none;
+  }
+
+  .catalogue-page {
+    padding-top: 52px;
+  }
+
+  .catalogue-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .entry-list .news-feature {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .news-image {
+    width: min(100%, 360px);
+    transform: none;
+  }
+
   .content-section {
     padding: 58px 0;
     scroll-margin-top: 150px;
@@ -1539,6 +1828,10 @@ html[data-theme="dark"] .button.primary {
 
   .button {
     width: 100%;
+  }
+
+  .catalogue-grid {
+    grid-template-columns: 1fr;
   }
 }
 
