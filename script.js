@@ -35,7 +35,13 @@ const setActiveNav = (sectionId) => {
   navLinks.forEach((link) => link.classList.toggle("active", link.hash === `#${sectionId}`));
 };
 
-const initialSection = (window.location.hash && document.querySelector(window.location.hash)) || sections[0];
+let initialSection = sections[0];
+try {
+  const sectionId = decodeURIComponent(window.location.hash.slice(1));
+  initialSection = (sectionId && document.getElementById(sectionId)) || sections[0];
+} catch {
+  // Malformed URL fragments should fall back without interrupting page setup.
+}
 if (initialSection) setActiveNav(initialSection.id);
 
 if ("IntersectionObserver" in window) {
