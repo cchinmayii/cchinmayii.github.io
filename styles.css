@@ -970,6 +970,10 @@ html[data-theme="dark"] .button.primary {
   font-size: 13px;
 }
 
+.zoom-instruction--mobile {
+  display: none;
+}
+
 .visualization-figure figcaption {
   margin-top: 14px;
   color: var(--muted);
@@ -1921,6 +1925,29 @@ html[data-theme="dark"] .button.primary {
   .research-methods-layout {
     grid-template-columns: 1fr;
     gap: 44px;
+  }
+
+  .research-visualization .visualization-figure {
+    width: 100%;
+  }
+
+  .visualization-frame,
+  .visualization-frame iframe {
+    touch-action: none;
+  }
+
+  .zoom-instruction--desktop {
+    display: none;
+  }
+
+  .zoom-instruction--mobile {
+    display: inline;
+  }
+
+  .visualization-meta .inline-link {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
   }
 
   .visualization-meta {

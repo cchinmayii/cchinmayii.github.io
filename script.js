@@ -22,6 +22,14 @@ themeToggle?.addEventListener("click", () => {
   localStorage.setItem("theme", nextTheme);
 });
 
+document.querySelectorAll("[data-visualization-expand]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (!window.matchMedia("(max-width: 780px)").matches) return;
+    event.preventDefault();
+    window.location.assign(link.href);
+  });
+});
+
 const navLinks = [...document.querySelectorAll(".site-nav a")].filter((link) => {
   const destination = new URL(link.href, window.location.href);
   const samePage =
@@ -286,7 +294,7 @@ if (ensnarlmentExperience) {
   const advanceTip = (state, tip, distance, deltaTime) => {
     const width = main.clientWidth;
     const height = main.clientHeight;
-    const margin = 22;
+    const margin = 0;
     const timeScale = deltaTime / 16.667;
     if (tip.fusionTarget) {
       tip.turnBias = 0;

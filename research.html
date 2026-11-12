@@ -8,7 +8,7 @@
     <meta name="color-scheme" content="light dark" />
     <title>Research - Chinmayi Subramanya</title>
     <link rel="icon" href="assets/favicon.png?v=7" type="image/png" sizes="256x256" />
-    <link rel="stylesheet" href="styles.css?v=61" />
+    <link rel="stylesheet" href="styles.css?v=63" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -33,12 +33,12 @@
         <h1 class="page-title" id="research-title">Research</h1>
         <div class="research-description">
           <p>
-            Organs often contain several flow networks woven through the tissue. In the liver, blood is carried by a capillary network called <em>Sinusoids</em>, and bile is drained through a network of <em>Canaliculi</em>. These form two distinct cyclic networks, embedded within the tissue, sharing the same 3D space.
+            Organs often contain several flow networks woven through the tissue. In the liver, blood flows through a capillary network of <em>Sinusoids</em>, and bile is drained through a network of <em>Canaliculi</em>. These form two distinct cyclic networks, embedded within the tissue, sharing the same 3D space.
           </p>
           <figure class="liver-figure">
-            <img src="assets/research/liver.svg" alt="Diagram of liver lobules, hepatocytes, blood sinusoids, and bile canaliculi" />
+            <img src="assets/research/liver.svg" alt="Diagram of liver lobules, hepatocytes, blood sinusoids, and bile canaliculi" decoding="async" fetchpriority="high" />
             <figcaption>
-              Microanatomy of the liver, consisting of hexagonal lobules. Each lobule contains a dense embedding of hepatocytes (among other cell types), with a rich blood supply from the Sinusoids. Bile drains into narrow lumina called Canaliculi. Illustration created in BioRender.
+              Microanatomy of the liver, consisting of hexagonal lobules. Each lobule contains a dense embedding of hepatocytes (among other cell types), with a rich blood supply from the hepatic artery and the portal vein. Blood flows toward the central vein through the Sinusoids. Bile flows out through narrow lumina called Canaliculi, and drains into the bile ducts. Illustration created in BioRender.
             </figcaption>
           </figure>
         </div>
@@ -60,7 +60,7 @@
             <figure class="visualization-figure">
               <div class="visualization-frame">
                 <iframe
-                  src="assets/visualizations/laves-period-2.html?v=2"
+                  src="assets/visualizations/laves-period-2.html"
                   title="Interactive 3D model of a double-Laves network pair"
                   loading="lazy"
                   allowfullscreen
@@ -68,8 +68,10 @@
                 ></iframe>
               </div>
               <div class="visualization-meta">
-                <p class="visualization-instructions" id="visualization-instructions">Drag to rotate · Scroll to zoom</p>
-                <a class="inline-link external-link" href="assets/visualizations/laves-period-2.html?v=2" target="_blank" rel="noreferrer">Expand visualization</a>
+                <p class="visualization-instructions" id="visualization-instructions">
+                  Drag to rotate · <span class="zoom-instruction zoom-instruction--desktop">Scroll</span><span class="zoom-instruction zoom-instruction--mobile">Pinch</span> to zoom
+                </p>
+                <a class="inline-link external-link" href="assets/visualizations/laves-period-2.html" target="_blank" rel="noreferrer" data-visualization-expand>Expand visualization</a>
               </div>
               <figcaption id="visualization-caption">
                 Interactive 3D model of a double-Laves network pair. The structures illustrate topological linking in an idealized network system rather than the actual geometry of biological tissue.
@@ -108,6 +110,6 @@
         <p class="footer-updated">Updated November 2026</p>
       </div>
     </footer>
-    <script src="script.js?v=18"></script>
+    <script src="script.js?v=19"></script>
   </body>
 </html>
