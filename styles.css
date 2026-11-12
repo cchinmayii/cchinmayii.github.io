@@ -893,8 +893,94 @@ html[data-theme="dark"] .button.primary {
   font-size: 16px;
 }
 
-.approach-list + .subsection {
+.liver-figure {
+  width: min(100%, 740px);
+  margin: 30px auto;
+}
+
+.liver-figure img {
+  width: 100%;
+  background: #f7f6f2;
+  border-radius: 10px;
+}
+
+.liver-figure figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.research-methods-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  align-items: start;
+  gap: 36px;
+}
+
+.research-methods-copy > p {
+  margin: 0 0 22px;
+  font-size: 16px;
+}
+
+.research-methods-copy > p:last-of-type {
+  margin-bottom: 0;
+}
+
+.research-methods-copy .approach-list {
+  margin-top: 32px;
+}
+
+.research-methods-layout + .subsection {
   margin-top: 56px;
+}
+
+.research-visualization .visualization-figure {
+  width: min(100%, 600px);
+  margin: 0 auto;
+}
+
+.visualization-frame {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.visualization-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.visualization-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.visualization-meta .visualization-instructions {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.visualization-figure figcaption {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.research-methods-layout .visualization-meta {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .subsection h3 {
@@ -1830,6 +1916,17 @@ html[data-theme="dark"] .button.primary {
 
   .publication-item {
     gap: 14px;
+  }
+
+  .research-methods-layout {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .visualization-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
   }
 
   .award-list li {

@@ -8,7 +8,7 @@
     <meta name="color-scheme" content="light dark" />
     <title>Research - Chinmayi Subramanya</title>
     <link rel="icon" href="assets/favicon.png?v=7" type="image/png" sizes="256x256" />
-    <link rel="stylesheet" href="styles.css?v=55" />
+    <link rel="stylesheet" href="styles.css?v=61" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -33,17 +33,50 @@
         <h1 class="page-title" id="research-title">Research</h1>
         <div class="research-description">
           <p>
-            Organs often contain several flow networks woven through the same three-dimensional space. In the liver, blood sinusoids and bile canaliculi form distinct cyclic networks that can be linked in ways that make them impossible to separate without cutting. We call this interlinking <strong>ensnarlment</strong>.
+            Organs often contain several flow networks woven through the tissue. In the liver, blood is carried by a capillary network called <em>Sinusoids</em>, and bile is drained through a network of <em>Canaliculi</em>. These form two distinct cyclic networks, embedded within the tissue, sharing the same 3D space.
           </p>
-          <p>
-            My work develops mathematical and physical ways to characterize these ensnarled architectures and asks what their spatial organization means for physiology.
-          </p>
+          <figure class="liver-figure">
+            <img src="assets/research/liver.svg" alt="Diagram of liver lobules, hepatocytes, blood sinusoids, and bile canaliculi" />
+            <figcaption>
+              Microanatomy of the liver, consisting of hexagonal lobules. Each lobule contains a dense embedding of hepatocytes (among other cell types), with a rich blood supply from the Sinusoids. Bile drains into narrow lumina called Canaliculi. Illustration created in BioRender.
+            </figcaption>
+          </figure>
         </div>
-        <ol class="approach-list">
-          <li><strong>Characterize</strong><span>Build measures that retain both the geometry and topology of real, spatially embedded networks.</span></li>
-          <li><strong>Compare</strong><span>Use synthetic systems and biological imaging data to identify recurring forms of network organization.</span></li>
-          <li><strong>Connect</strong><span>Relate network architecture to transport, development, and function in living tissues.</span></li>
-        </ol>
+        <div class="research-methods-layout">
+          <div class="research-methods-copy">
+            <p>
+              When two cyclic networks share 3D space, they can be linked in ways that make them impossible to separate without cutting. We call this interlinking <strong>ensnarlment</strong>.
+            </p>
+            <p>
+              My work develops mathematical and physical ways to characterize these ensnarled architectures and asks what their spatial organization means for physiology.
+            </p>
+            <ol class="approach-list">
+              <li><strong>Characterize</strong><span>Build measures that retain both the geometry and topology of real, spatially embedded networks.</span></li>
+              <li><strong>Compare</strong><span>Use synthetic systems and biological imaging data to identify recurring forms of network organization.</span></li>
+              <li><strong>Connect</strong><span>Relate network architecture to transport, development, and function in living tissues.</span></li>
+            </ol>
+          </div>
+          <div class="research-visualization">
+            <figure class="visualization-figure">
+              <div class="visualization-frame">
+                <iframe
+                  src="assets/visualizations/laves-period-2.html?v=2"
+                  title="Interactive 3D model of a double-Laves network pair"
+                  loading="lazy"
+                  allowfullscreen
+                  aria-describedby="visualization-caption visualization-instructions"
+                ></iframe>
+              </div>
+              <div class="visualization-meta">
+                <p class="visualization-instructions" id="visualization-instructions">Drag to rotate · Scroll to zoom</p>
+                <a class="inline-link external-link" href="assets/visualizations/laves-period-2.html?v=2" target="_blank" rel="noreferrer">Expand visualization</a>
+              </div>
+              <figcaption id="visualization-caption">
+                Interactive 3D model of a double-Laves network pair. The structures illustrate topological linking in an idealized network system rather than the actual geometry of biological tissue.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
         <div class="subsection">
           <h2 class="research-subheading">Papers</h2>
           <article class="publication-item">
