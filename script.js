@@ -652,35 +652,64 @@ if (ensnarlmentExperience) {
     trigger.addEventListener("click", () => activateNetwork(color));
   });
 
-  const gazePositions = [
-    [0, 0],
-    [-2, 0],
-    [2, 0],
-    [0, -1],
-    [0, 1],
-    [-1, -1],
-    [1, -1],
-    [-1, 1],
-    [1, 1],
-  ];
+  const gazeTargets = Object.values(triggers).map((trigger) => ({
+    trigger,
+    pupils: [...trigger.querySelectorAll(".pixel-character__pupil")],
+  }));
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+  let gazeFrame = 0;
+  let pointerX = 0;
+  let pointerY = 0;
 
-  const startRandomGaze = (trigger) => {
-    const pupils = [...trigger.querySelectorAll(".pixel-character__pupil")];
-    let lastPosition = -1;
-    const moveEyes = () => {
-      let nextPosition = Math.floor(Math.random() * gazePositions.length);
-      while (nextPosition === lastPosition) nextPosition = Math.floor(Math.random() * gazePositions.length);
-      lastPosition = nextPosition;
-      const [offsetX, offsetY] = gazePositions[nextPosition];
+  const centerEyes = () => {
+    if (gazeFrame) {
+      window.cancelAnimationFrame(gazeFrame);
+      gazeFrame = 0;
+    }
+
+    gazeTargets.forEach(({ pupils }) => {
+      pupils.forEach((pupil) => {
+        pupil.style.transform = "translate(0, 0)";
+      });
+    });
+  };
+
+  const updateGaze = () => {
+    gazeFrame = 0;
+    const gazeRadius = Math.min(360, Math.max(260, window.innerWidth * 0.24));
+    const maxPupilOffset = 2;
+
+    gazeTargets.forEach(({ trigger, pupils }) => {
+      const bounds = trigger.getBoundingClientRect();
+      const deltaX = pointerX - (bounds.left + bounds.width / 2);
+      const deltaY = pointerY - (bounds.top + bounds.height / 2);
+      const distance = Math.hypot(deltaX, deltaY);
+      let offsetX = 0;
+      let offsetY = 0;
+
+      if (distance > 0 && distance <= gazeRadius) {
+        const proximity = 1 - distance / gazeRadius;
+        const strength = maxPupilOffset * (0.55 + proximity * 0.45);
+        offsetX = Math.round((deltaX / distance) * strength);
+        offsetY = Math.round((deltaY / distance) * strength);
+      }
+
       pupils.forEach((pupil) => {
         pupil.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
       });
-      window.setTimeout(moveEyes, 1900 + Math.random() * 2700);
-    };
-    window.setTimeout(moveEyes, 700 + Math.random() * 1700);
+    });
   };
 
-  Object.values(triggers).forEach(startRandomGaze);
+  document.addEventListener("pointermove", (event) => {
+    if (!finePointer.matches || event.pointerType === "touch") return;
+    pointerX = event.clientX;
+    pointerY = event.clientY;
+    if (!gazeFrame) gazeFrame = window.requestAnimationFrame(updateGaze);
+  }, { passive: true });
+
+  document.documentElement.addEventListener("mouseleave", centerEyes);
+  window.addEventListener("blur", centerEyes);
+  finePointer.addEventListener("change", centerEyes);
 
   dismissSpeech.addEventListener("click", (event) => {
     event.stopPropagation();

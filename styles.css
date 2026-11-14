@@ -1688,17 +1688,34 @@ html[data-theme="dark"] .button.primary {
 
 @media (min-width: 1500px) and (min-height: 850px) {
   .home-page .home-main {
+    --large-profile-width: min(calc(100% - 96px), clamp(1040px, calc(62vw + 110px), 1300px));
     display: grid;
     align-items: center;
     padding-bottom: clamp(18px, 3vh, 42px);
   }
 
   .home-page .profile {
-    width: min(calc(100% - 96px), clamp(1040px, calc(62vw + 110px), 1300px));
+    width: var(--large-profile-width);
     grid-template-columns: minmax(0, 680px) clamp(270px, calc(12vw + 90px), 320px);
     justify-content: space-between;
     column-gap: clamp(56px, 6vw, 120px);
     padding-block: clamp(56px, 6vh, 76px);
+  }
+
+  .home-page .network-character,
+  .home-page .network-character-anchor {
+    width: clamp(78px, 4.5vw, 96px);
+    height: clamp(78px, 4.5vw, 96px);
+  }
+
+  .home-page .network-character--green {
+    top: clamp(26px, 3.08vh, 40px);
+    left: clamp(24px, 1.51vw, 44px);
+  }
+
+  .home-page .network-character-anchor--magenta {
+    right: clamp(24px, 1.51vw, 44px);
+    bottom: clamp(28px, 3.32vh, 44px);
   }
 
   .home-page .profile h1 {
